@@ -1,0 +1,137 @@
+/* Đặt chiều cao cho phần tử html và body */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+/* Sử dụng Flexbox trên thẻ body */
+body {
+    display: flex;
+    flex-direction: column;
+}
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+body {
+    font-size: 1.6rem;
+}
+/* Nội dung chính sẽ chiếm đầy không gian */
+.content {
+    flex: 1 0 auto;
+}
+/* Footer sẽ tự động đẩy xuống cuối cùng */
+.footer-content {
+    margin-bottom: 20px;
+}
+.footer-content h3 {
+    margin-bottom: 10px;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #3d3636;
+    color: white;
+    text-align: center;}
+
+.card-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-block {
+    /* border: 1px solid #eeeeeeee; */
+    width: 25.6rem;
+    margin: 0.3rem;
+    padding: 0.3rem;
+    background-color: #fafafa;
+    transition: 0.3s;
+}
+.card-block:hover {
+    box-shadow: 3px 4px 15px 0px black;
+}
+.card-img {
+    /* border: 1px solid rebeccapurple; */
+    height: 250px;
+    overflow: hidden;
+}
+.card-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* height: auto; */
+}
+.card-infor {
+    /* border: 1px solid burlywood; */
+    padding: 2px 0px;
+}
+.card-controller {
+    /* border: 1px solid hotpink; */
+    display: flex;
+    justify-content: space-between;
+}
+.card-controller-block {
+    width: calc(50% - 1px);
+}
+.a_btn-card_controller {
+    background-color: #3481c2;
+    color: white;
+    height: 3rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+/* .card-controller-block .a_btn-card_controller:first-child{
+    border-right: 1px solid white;
+}
+.card-controller-block .a_btn-card_controller:last-child{
+    border-left: 1px solid white;
+} */
+.a_btn-card_controller:hover {
+    background-color: teal;
+    text-decoration: none;
+}
+.splide__slide {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    gap: 10px; /* Space between items */
+    justify-content: flex-start;
+}
+.flex-item {
+    flex: 0 1 30%; /* Grow, Shrink, Basis */
+    /* flex-basis at 30% allows for three items (since 3 * 30% = 90%, leaving 10% space for margins/padding) */
+    margin: 5px;
+    padding: 10px;
+    text-align: start;
+}
+.paging-container {
+    width: 100%; /* Take full width to center the pagination */
+    display: flex; /* Use flexbox to center children */
+    justify-content: center; /* Center the children horizontally */
+    align-items: center; /* Center the children vertically */
+    padding: 10px 0; /* Some padding above and below */
+}
+
+/* Individual pagination item */
+.paging {
+    margin: 0 5px; /* Margin between pagination items */
+    padding: 5px 10px; /* Padding inside the pagination items */
+    border: 1px solid #ddd; /* Border for pagination items */
+    border-radius: 8px;
+}
+
+/* Active pagination item */
+.active {
+    color: #c2beb4;
+}
